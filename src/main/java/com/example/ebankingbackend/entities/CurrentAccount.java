@@ -9,7 +9,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
-//@DiscriminatorValue("CUR")
+@DiscriminatorValue("CUR")
 @Data @AllArgsConstructor @NoArgsConstructor
 public class CurrentAccount extends BankAccount{
     private  double overDraft ;
