@@ -1,0 +1,54 @@
+<div class="row mt-3 me-5 ms-5">
+<div class="col ">
+<div class="container">
+  <div class="card ">
+    <div class="card-header">
+      New Current Account
+    </div>
+    <div class="card-body">
+      <form [formGroup]="newCurrentFormGroup" (ngSubmit)="handleSaveCurrentAccount()">
+        <div class="mb-3">
+          <label class="form-label">Balance :</label>
+          <input type="text" formControlName="balance" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Overdraft :</label>
+          <input type="text" formControlName="overDraft" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">customerId :</label>
+          <input type="text" formControlName="customerId" class="form-control">
+        </div>
+        <button [disabled]="!newCurrentFormGroup.valid" class="btn btn-info">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col">
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        New Saving Account
+      </div>
+      <div class="card-body">
+        <form [formGroup]="newSavingFormGroup" (ngSubmit)="handleSaveSavingAccount()">
+          <div class="mb-3">
+            <label class="form-label">Balance :</label>
+            <input type="text" formControlName="balance" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Interest Rate :</label>
+            <input type="text" formControlName="interestRate" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">customerId :</label>
+            <input type="text" formControlName="customerId" class="form-control">
+          </div>
+          <button [disabled]="!newSavingFormGroup.valid" class="btn btn-info">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
